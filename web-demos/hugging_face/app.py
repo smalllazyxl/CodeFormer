@@ -227,9 +227,7 @@ demo = gr.Interface(
         gr.outputs.Image(type="numpy", label="Output"),
         gr.outputs.File(label="Download the output")
     ],
-    title=title,
-    description=description,
-    article=article,       
+    title=title,     
     examples=[
         ['01.png', True, True, 2, 0.7],
         ['02.jpg', True, True, 2, 0.7],
