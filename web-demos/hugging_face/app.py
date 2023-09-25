@@ -214,7 +214,7 @@ def inference(image, background_enhance, face_upsample, upscale, codeformer_fide
         return None, None
 
 
-title = "CodeFormer: Robust Face Restoration and Enhancement Network"
+title = "CodeFormer deployed by S1mpleCat"
 description = r"""<center><img src='https://user-images.githubusercontent.com/14334509/189166076-94bb2cac-4f4e-40fb-a69f-66709e3d98f5.png' alt='CodeFormer logo'></center>
 <b>Official Gradio demo</b> for <a href='https://github.com/sczhou/CodeFormer' target='_blank'><b>Towards Robust Blind Face Restoration with Codebook Lookup Transformer (NeurIPS 2022)</b></a>.<br>
 🔥 CodeFormer is a robust face restoration algorithm for old photos or AI-generated faces.<br>
