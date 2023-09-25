@@ -215,46 +215,6 @@ def inference(image, background_enhance, face_upsample, upscale, codeformer_fide
 
 
 title = "CodeFormer deployed by S1mpleCat"
-description = r"""<center><img src='https://user-images.githubusercontent.com/14334509/189166076-94bb2cac-4f4e-40fb-a69f-66709e3d98f5.png' alt='CodeFormer logo'></center>
-<b>Official Gradio demo</b> for <a href='https://github.com/sczhou/CodeFormer' target='_blank'><b>Towards Robust Blind Face Restoration with Codebook Lookup Transformer (NeurIPS 2022)</b></a>.<br>
-🔥 CodeFormer is a robust face restoration algorithm for old photos or AI-generated faces.<br>
-🤗 Try CodeFormer for improved stable-diffusion generation!<br>
-"""
-article = r"""
-If CodeFormer is helpful, please help to ⭐ the <a href='https://github.com/sczhou/CodeFormer' target='_blank'>Github Repo</a>. Thanks! 
-[![GitHub Stars](https://img.shields.io/github/stars/sczhou/CodeFormer?style=social)](https://github.com/sczhou/CodeFormer)
-
----
-
-📝 **Citation**
-
-If our work is useful for your research, please consider citing:
-```bibtex
-@inproceedings{zhou2022codeformer,
-    author = {Zhou, Shangchen and Chan, Kelvin C.K. and Li, Chongyi and Loy, Chen Change},
-    title = {Towards Robust Blind Face Restoration with Codebook Lookup TransFormer},
-    booktitle = {NeurIPS},
-    year = {2022}
-}
-```
-
-📋 **License**
-
-This project is licensed under <a rel="license" href="https://github.com/sczhou/CodeFormer/blob/master/LICENSE">S-Lab License 1.0</a>. 
-Redistribution and use for non-commercial purposes should follow this license.
-
-📧 **Contact**
-
-If you have any questions, please feel free to reach me out at <b>shangchenzhou@gmail.com</b>.
-
-<div>
-    🤗 Find Me:
-    <a href="https://twitter.com/ShangchenZhou"><img style="margin-top:0.5em; margin-bottom:0.5em" src="https://img.shields.io/twitter/follow/ShangchenZhou?label=%40ShangchenZhou&style=social" alt="Twitter Follow"></a> 
-    <a href="https://github.com/sczhou"><img style="margin-top:0.5em; margin-bottom:2em" src="https://img.shields.io/github/followers/sczhou?style=social" alt="Github Follow"></a>
-</div>
-
-<center><img src='https://visitor-badge-sczhou.glitch.me/badge?page_id=sczhou/CodeFormer' alt='visitors'></center>
-"""
 
 demo = gr.Interface(
     inference, [
