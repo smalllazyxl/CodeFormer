@@ -10,6 +10,7 @@ import cv2
 import torch
 import torch.nn.functional as F
 import gradio as gr
+import uuid
 
 from torchvision.transforms.functional import normalize
 
@@ -206,7 +207,8 @@ def inference(image, background_enhance, face_upsample, upscale, codeformer_fide
                 )
 
         # save restored img
-        save_path = f'output/out.png'
+        unique_filename = str(uuid.uuid4())  # generate a unique ID
+        save_path = f'output/out_{unique_filename}.png'
         imwrite(restored_img, str(save_path))
 
         restored_img = cv2.cvtColor(restored_img, cv2.COLOR_BGR2RGB)
