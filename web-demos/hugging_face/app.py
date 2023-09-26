@@ -43,6 +43,7 @@ if not os.path.exists('CodeFormer/weights/realesrgan/RealESRGAN_x2plus.pth'):
     load_file_from_url(url=pretrain_model_url['realesrgan'], model_dir='CodeFormer/weights/realesrgan', progress=True, file_name=None)
 
 # download images
+"""
 torch.hub.download_url_to_file(
     'https://replicate.com/api/models/sczhou/codeformer/files/fa3fe3d1-76b0-4ca8-ac0d-0a925cb0ff54/06.png',
     '01.png')
@@ -58,6 +59,7 @@ torch.hub.download_url_to_file(
 torch.hub.download_url_to_file(
     'https://replicate.com/api/models/sczhou/codeformer/files/7cf19c2c-e0cf-4712-9af8-cf5bdbb8d0ee/012.jpg',
     '05.jpg')
+"""
 
 def imread(img_path):
     img = cv2.imread(img_path)
@@ -88,7 +90,7 @@ def set_realesrgan():
     return upsampler
 
 upsampler = set_realesrgan()
-# device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 device = get_device()
 codeformer_net = ARCH_REGISTRY.get("CodeFormer")(
     dim_embd=512,
@@ -229,7 +231,7 @@ demo = gr.Interface(
     ],
     title=title,     
     examples=[
-        ['01.png', True, True, 2, 0.7],
+        ['01.png', True, True, 1, 0.7],
         ['02.jpg', True, True, 2, 0.7],
         ['03.jpg', True, True, 2, 0.7],
         ['04.jpg', True, True, 2, 0.1],
@@ -237,5 +239,14 @@ demo = gr.Interface(
       ]
     )
 
-demo.queue(concurrency_count=2)
-demo.launch()
+# demo.queue(concurrency_count=2)
+# demo.launch(share=True)
+demo.queue(concurrency_count=2).launch(
+    server_name='0.0.0.0',
+    server_port=7860,
+    share=False,
+    show_error=True,
+    debug=True,
+    enable_queue=True,
+    inbrowser=True,
+)
