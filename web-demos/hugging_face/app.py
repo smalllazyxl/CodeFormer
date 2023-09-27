@@ -236,8 +236,8 @@ demo = gr.Interface(
         ['01.png', True, True, 1, 0.7],
         ['02.jpg', True, True, 2, 0.7],
         ['03.jpg', True, True, 2, 0.7],
-        ['04.jpg', True, True, 2, 0.1],
-        ['05.jpg', True, True, 2, 0.1]
+        ['04.jpg', True, True, 2, 0.7],
+        ['05.jpg', True, True, 2, 0.7]
       ]
     )
 
@@ -252,3 +252,18 @@ demo.queue(concurrency_count=2).launch(
     enable_queue=True,
     inbrowser=True,
 )
+"""
+# https
+app = demo.queue(concurrency_count=2)
+
+if __name__ == "__main__":
+    app.launch(
+        server_name='0.0.0.0',
+        server_port=7860,
+        share=False,
+        show_error=True,
+        debug=True,
+        enable_queue=True,
+        inbrowser=True,
+    )
+"""
