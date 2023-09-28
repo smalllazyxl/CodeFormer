@@ -20,15 +20,6 @@ S-Lab, Nanyang Technological University
 :star: If CodeFormer is helpful to your images or projects, please help star this repo. Thanks! :hugs: 
 
 
-### Update
-- **2023.07.20**: Integrated to :panda_face: [OpenXLab](https://openxlab.org.cn/apps). Try out online demo! [![OpenXLab](https://img.shields.io/badge/Demo-%F0%9F%90%BC%20OpenXLab-blue)](https://openxlab.org.cn/apps/detail/ShangchenZhou/CodeFormer)
-- **2023.04.19**: :whale: Training codes and config files are public available now.
-- **2023.04.09**: Add features of inpainting and colorization for cropped and aligned face images.
-- **2023.02.10**: Include `dlib` as a new face detector option, it produces more accurate face identity.
-- **2022.10.05**: Support video input `--input_path [YOUR_VIDEO.mp4]`. Try it to enhance your videos! :clapper: 
-- **2022.09.14**: Integrated to :hugs: [Hugging Face](https://huggingface.co/spaces). Try out online demo! [![Hugging Face](https://img.shields.io/badge/Demo-%F0%9F%A4%97%20Hugging%20Face-blue)](https://huggingface.co/spaces/sczhou/CodeFormer)
-- **2022.09.09**: Integrated to :rocket: [Replicate](https://replicate.com/explore). Try out online demo! [![Replicate](https://img.shields.io/badge/Demo-%F0%9F%9A%80%20Replicate-blue)](https://replicate.com/sczhou/codeformer)
-- [**More**](docs/history_changelog.md)
 
 ### TODO
 - [x] Add training code and config files
